@@ -5,7 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'replace-me-in-production'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+if os.environ.get('CODESPACE_NAME'):
+    ALLOWED_HOSTS.append(f"{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -16,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'tracker',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +60,8 @@ DATABASES = {
 }
 
 AUTH_PASSWORD_VALIDATORS = []
+
+AUTH_USER_MODEL = 'tracker.User'
 
 LANGUAGE_CODE = 'ja'
 TIME_ZONE = 'UTC'
