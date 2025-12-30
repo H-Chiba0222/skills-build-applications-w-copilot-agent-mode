@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OctoFit Tracker — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>OctoFit Tracker</h1>
+        <nav>
+          <a href="#features">機能</a>
+          <a href="#activity">アクティビティ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>あなたの活動を記録して、チームで競おう</h2>
+        <p>これは OctoFit Tracker の簡易デモページです。ローカルで動かして試せます。</p>
+      </section>
+
+      <section id="features" class="features">
+        <h3>主な機能</h3>
+        <ul>
+          <li>ユーザー認証とプロフィール</li>
+          <li>アクティビティログ</li>
+          <li>チームとリーダーボード</li>
+        </ul>
+      </section>
+
+      <section id="activity" class="activity">
+        <h3>アクティビティを追加</h3>
+        <form id="activity-form">
+          <input id="activity-input" placeholder="例: ランニング 5km" />
+          <button type="submit">追加</button>
+        </form>
+
+        <ul id="activity-list"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">OctoFit Tracker — Demo</div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
